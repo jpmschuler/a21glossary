@@ -19,6 +19,9 @@
 			<trans-unit id="tx_a21glossary_main.longversion">
 				<source>Long text</source>
 			</trans-unit>
+			<trans-unit id="tx_a21glossary_main.tooltip">
+				<source>Tooltip</source>
+			</trans-unit>
 			<trans-unit id="tx_a21glossary_main.shorttype.I.0">
 				<source>Language</source>
 			</trans-unit>
