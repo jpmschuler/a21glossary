@@ -190,6 +190,7 @@ class Processor
                 $element = trim(htmlspecialchars(strip_tags($item['shorttype']), ENT_QUOTES, $renderCharset));
                 $titleText = trim(htmlspecialchars(strip_tags($item['longversion']), ENT_QUOTES, $renderCharset));
                 $title = $item['longversion'] ? (' title="' . $titleText . '"') : '';
+                $tooltip = trim(htmlspecialchars(strip_tags($item['tooltip']), ENT_QUOTES, $renderCharset)) ?? false;
 
                 // those can be retrieved later with stdwrap
                 $this->tsFeController->register['lang'] = $lang;
@@ -228,7 +229,11 @@ class Processor
                 }
 
                 $replacement = trim($cObj->stdWrap($replacement, $this->config[$element] ?? []));
-                $replacement = ' <' . $element . $lang . $title . '> ' . $replacement . ' </' . $element . '> ';
+                if ($tooltip) {
+                    $replacement = ' <' . $element . ' class="tooltip-available" data-toggle="tooltip" title="' . $tooltip . '"> ' . $replacement . ' </' . $element . '> ';
+                } else {
+                    $replacement = ' <' . $element . $lang . $title . '> ' . $replacement . ' </' . $element . '> ';
+                }
 
                 if ($generateLink) {
                     $replacement = ' ' . $cObj->typoLink($replacement, $this->config['typolink.'] ?? []) . ' ';
