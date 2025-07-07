@@ -230,7 +230,7 @@ class Processor
 
                 $replacement = trim($cObj->stdWrap($replacement, $this->config[$element] ?? []));
                 if ($tooltip) {
-                    $replacement = ' <' . $element . ' class="tooltip-available" data-toggle="tooltip" title="' . $tooltip . '"> ' . $replacement . ' </' . $element . '> ';
+                    $replacement = ' <' . $element . ' class="tooltip-available" tabindex="0" data-toggle="tooltip" title="' . $tooltip . '"> ' . $replacement . ' </' . $element . '> ';
                 } else {
                     $replacement = ' <' . $element . $lang . $title . '> ' . $replacement . ' </' . $element . '> ';
                 }
