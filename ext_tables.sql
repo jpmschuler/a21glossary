@@ -6,6 +6,7 @@ CREATE TABLE tx_a21glossary_main
 	short              tinytext               NOT NULL,
 	shortcut           tinytext               NOT NULL,
 	longversion        tinytext               NOT NULL,
+	tooltip        		 text                        		 NOT NULL,
 	shorttype          tinytext               NOT NULL,
 	language           char(2)    DEFAULT ''  NOT NULL,
 	description        text                   NOT NULL,
