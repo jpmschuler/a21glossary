@@ -139,6 +139,15 @@ return [
                 'eval' => 'trim',
             ]
         ],
+        'tooltip' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:a21glossary/Resources/Private/Language/locallang_db.xml:tx_a21glossary_main.tooltip',
+            'config' => [
+                'type' => 'input',
+                'size' => '48',
+                'eval' => 'trim',
+            ]
+        ],
         'shorttype' => [
             'exclude' => 1,
             'label' => 'LLL:EXT:a21glossary/Resources/Private/Language/locallang_db.xml:tx_a21glossary_main.shorttype',
@@ -288,7 +297,7 @@ return [
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                     short, shorttype, description,
                 --div--;LLL:EXT:a21glossary/Resources/Private/Language/locallang_db.xml:tx_a21glossary_main.tabs.advanced,
-                    shortcut, longversion, language, link, exclude,
+                    shortcut, longversion, tooltip, language, link, exclude,
                 --div--;LLL:EXT:a21glossary/Resources/Private/Language/locallang_db.xml:tx_a21glossary_main.tabs.settings,
                     force_linking,force_case,force_preservecase,force_regexp,force_global,
                 --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
